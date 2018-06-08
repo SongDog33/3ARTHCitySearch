@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class CityMapViewController: UIViewController {
+class CityMapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var cityLabel: UILabel!
