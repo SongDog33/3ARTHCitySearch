@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R7p-kE-r10">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,6 +56,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="q57-11-Z0a" id="3K9-O5-NnD"/>
+                                            <segue destination="v8c-E4-IyN" kind="presentation" identifier="CityMapSegue" id="UN1-jb-6ET"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -73,7 +74,7 @@
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.38375034022237409" green="1" blue="0.75374059155338158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.38431372549019605" green="1" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lUa-Xa-aXA" firstAttribute="trailing" secondItem="Ozu-dS-NGY" secondAttribute="trailing" id="7Ia-8P-fJP"/>
                             <constraint firstItem="lUa-Xa-aXA" firstAttribute="top" secondItem="Ok6-B1-2LR" secondAttribute="bottom" constant="43" id="AGO-ag-Iu5"/>
@@ -94,6 +95,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rkn-k6-K46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92" y="12.143928035982009"/>
+        </scene>
+        <!--City Map View Controller-->
+        <scene sceneID="Mn2-GA-5rm">
+            <objects>
+                <viewController id="v8c-E4-IyN" customClass="CityMapViewController" customModule="_ARTHCitySearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qc1-OH-xVd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dJZ-Z5-LWp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="486"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzN-aM-V3q">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.58596425513698636" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4UG-pb-NPn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville-BoldItalic" family="Baskerville" pointSize="22"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.99395076640000002" green="1" blue="0.42649314189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissMapView:" destination="v8c-E4-IyN" eventType="touchUpInside" id="hef-C2-DaJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V73-D2-emq">
+                                <rect key="frame" x="19" y="529" width="337" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38431372549019605" green="1" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yzN-aM-V3q" firstAttribute="top" secondItem="dJZ-Z5-LWp" secondAttribute="bottom" constant="131" id="1Wv-4C-55A"/>
+                            <constraint firstItem="dJZ-Z5-LWp" firstAttribute="top" secondItem="Qc1-OH-xVd" secondAttribute="top" id="2f0-0T-gmh"/>
+                            <constraint firstItem="dJZ-Z5-LWp" firstAttribute="leading" secondItem="hQ6-kK-yba" secondAttribute="leading" id="9i8-gd-jix"/>
+                            <constraint firstItem="yzN-aM-V3q" firstAttribute="bottom" secondItem="hQ6-kK-yba" secondAttribute="bottom" id="Fz5-K9-rZj"/>
+                            <constraint firstItem="dJZ-Z5-LWp" firstAttribute="trailing" secondItem="hQ6-kK-yba" secondAttribute="trailing" id="XYR-UL-HXK"/>
+                            <constraint firstItem="yzN-aM-V3q" firstAttribute="leading" secondItem="hQ6-kK-yba" secondAttribute="leading" id="lKZ-ie-6Mq"/>
+                            <constraint firstItem="yzN-aM-V3q" firstAttribute="top" secondItem="dJZ-Z5-LWp" secondAttribute="bottom" constant="131" id="nRL-ii-3OH"/>
+                            <constraint firstItem="yzN-aM-V3q" firstAttribute="trailing" secondItem="hQ6-kK-yba" secondAttribute="trailing" id="uHa-98-Jpc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hQ6-kK-yba"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="dJZ-Z5-LWp" id="DjO-cn-o71"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJV-2b-FGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.60000000000002" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>

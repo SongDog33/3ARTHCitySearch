@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9240E9D20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */; };
+		D9240E9E20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */; };
+		D9240EA120CAF1D900E4CBEE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9240EA020CAF1D900E4CBEE /* MapKit.framework */; };
 		D9C02BE620CA2F5D00C22613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */; };
 		D9C02BEB20CA2F5D00C22613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BE920CA2F5D00C22613 /* Main.storyboard */; };
 		D9C02BED20CA2F5E00C22613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */; };
@@ -29,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapViewController.swift; sourceTree = "<group>"; };
+		D9240EA020CAF1D900E4CBEE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D9C02BE220CA2F5D00C22613 /* 3ARTHCitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3ARTHCitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C02BEA20CA2F5D00C22613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9240EA120CAF1D900E4CBEE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +66,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9240E9F20CAF1D800E4CBEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9240EA020CAF1D900E4CBEE /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9C02BD920CA2F5D00C22613 = {
 			isa = PBXGroup;
 			children = (
 				D9C02BE420CA2F5D00C22613 /* 3ARTHCitySearch */,
 				D9C02BF920CA2F5F00C22613 /* 3ARTHCitySearchTests */,
 				D9C02BE320CA2F5D00C22613 /* Products */,
+				D9240E9F20CAF1D800E4CBEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,7 @@
 			children = (
 				D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */,
 				D9C02C0B20CA367800C22613 /* CitySearchHomeViewController.swift */,
+				D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */,
 				D9C02BE920CA2F5D00C22613 /* Main.storyboard */,
 				D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */,
 				D9C02BEE20CA2F5E00C22613 /* LaunchScreen.storyboard */,
@@ -204,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9240E9D20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */,
 				D9C02C0C20CA367800C22613 /* CitySearchHomeViewController.swift in Sources */,
 				D9C02BE620CA2F5D00C22613 /* AppDelegate.swift in Sources */,
 			);
@@ -213,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9240E9E20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */,
 				D9C02C0D20CA367800C22613 /* CitySearchHomeViewController.swift in Sources */,
 				D9C02BFB20CA2F5F00C22613 /* _ARTHCitySearchTests.swift in Sources */,
 			);
