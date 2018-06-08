@@ -11,7 +11,6 @@ import UIKit
 class CitySearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
-    
 }
 
 class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -53,7 +52,9 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CityMapSegue" {
             let vc = segue.destination as! CityMapViewController
-            vc.cityString = "My City, 3ARTH"
+            let cell = sender as! CitySearchTableViewCell
+            let idxPath = tableView.indexPath(for: cell)
+            vc.city = citiesArray?[(idxPath?.row)!] as? City
         }
     }
 

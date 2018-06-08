@@ -18,6 +18,7 @@
 		D9240EAA20CB09D300E4CBEE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EA820CB09D300E4CBEE /* Location.swift */; };
 		D9240EAD20CB222C00E4CBEE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EAC20CB222C00E4CBEE /* UIViewControllerExtension.swift */; };
 		D9240EAE20CB222C00E4CBEE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EAC20CB222C00E4CBEE /* UIViewControllerExtension.swift */; };
+		D9240EB020CB2E7100E4CBEE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9240EAF20CB2E7100E4CBEE /* CoreLocation.framework */; };
 		D9C02BE620CA2F5D00C22613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */; };
 		D9C02BEB20CA2F5D00C22613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BE920CA2F5D00C22613 /* Main.storyboard */; };
 		D9C02BED20CA2F5E00C22613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		D9240EA520CB098100E4CBEE /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		D9240EA820CB09D300E4CBEE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D9240EAC20CB222C00E4CBEE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		D9240EAF20CB2E7100E4CBEE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D9C02BE220CA2F5D00C22613 /* 3ARTHCitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3ARTHCitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C02BEA20CA2F5D00C22613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9240EB020CB2E7100E4CBEE /* CoreLocation.framework in Frameworks */,
 				D9240EA120CAF1D900E4CBEE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +84,7 @@
 		D9240E9F20CAF1D800E4CBEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9240EAF20CB2E7100E4CBEE /* CoreLocation.framework */,
 				D9240EA020CAF1D900E4CBEE /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -119,9 +123,9 @@
 			children = (
 				D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */,
 				D9C02C0B20CA367800C22613 /* CitySearchHomeViewController.swift */,
-				D9240EAC20CB222C00E4CBEE /* UIViewControllerExtension.swift */,
 				D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */,
 				D9240EA220CB053100E4CBEE /* JSONHandler.swift */,
+				D9240EAC20CB222C00E4CBEE /* UIViewControllerExtension.swift */,
 				D9240EAB20CB160B00E4CBEE /* Structs */,
 				D9C02BE920CA2F5D00C22613 /* Main.storyboard */,
 				D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */,

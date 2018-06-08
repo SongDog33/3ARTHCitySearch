@@ -46,7 +46,7 @@ final class JSONHandler {
         if let arr = jsonFile {
             for city in arr {
                 //Create City Objects with Location Variables
-                let cityStruct = City(name: city["name"] as! String, country: city["country"] as! String, center: Location(latitude: (city["coord"] as! [String : Any])["lat"] as! Double, longitude: (city["coord"] as! [String : Any])["lat"] as! Double))
+                let cityStruct = City(name: city["name"] as! String, country: city["country"] as! String, center: Location(latitude: (city["coord"] as! [String : Any])["lat"] as! Double, longitude: (city["coord"] as! [String : Any])["lon"] as! Double))
                 parsedArr.append(cityStruct)
             }
             return parsedArr

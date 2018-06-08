@@ -8,42 +8,44 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class CityMapViewController: UIViewController, MKMapViewDelegate {
+class CityMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var cityLabel: UILabel!
-    var cityString: String?
+    var city: City?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let cityName = cityString {
-            cityLabel.text = cityName
+        if let city = city {
+            cityLabel.text = "\(city.name), \(city.country)"
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let city = city {
+            let center = CLLocationCoordinate2D(latitude: city.center.latitude, longitude: city.center.longitude)
+            let span = MKCoordinateSpan(latitudeDelta: 40, longitudeDelta: 40)
+            let savedRegion = MKCoordinateRegion(center: center, span: span)
+            
+            self.mapView.setRegion(savedRegion, animated: false)
+            
+            let camera = MKMapCamera(lookingAtCenter: center, fromEyeCoordinate: center, eyeAltitude: 10610)
+            mapView.setCamera(camera, animated: true)
         }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func dismissMapView(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
