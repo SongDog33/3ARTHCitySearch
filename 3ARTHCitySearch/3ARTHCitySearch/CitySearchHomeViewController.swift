@@ -25,7 +25,8 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        citiesArray = jsonHandler.parseCityArray()
+        let arr = jsonHandler.parseCityArray()
+        citiesArray = orderCitiesArray(arr: arr)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +35,7 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     
     //MARK: UITableView Datasource & Delegate Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return (citiesArray?.count)!
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,8 +44,9 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CitySearchTableViewCell", for: indexPath) as! CitySearchTableViewCell
+        let city = citiesArray?[indexPath.row] as! City
+        cell.nameLabel.text = "\(city.name), \(city.country)"
         
-        cell.nameLabel.text = "My City"
         return cell
     }
     
