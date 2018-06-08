@@ -8,11 +8,13 @@
 
 import Foundation
 
+
 final class JSONHandler {
+    
     static let defaultHandler = JSONHandler()
     private static let filePath = "cities"
-    
     private var jsonFile : [[String : Any]]?
+    
     private init() {
         self.readJson()
     }
@@ -39,18 +41,17 @@ final class JSONHandler {
         }
     }
     
-    func parseCityArray () -> [[String : Any]] {
-        
-//        let arr : [Any] = jsonFile!["movies"] as! [[String : Any]]
-        var parsedArr: [[String : Any]] = []
+    func parseCityArray () -> [City] {
+        var parsedArr: [City] = []
         if let arr = jsonFile {
             for city in arr {
                 //Create City Objects with Location Variables
+                let cityStruct = City(name: city["name"] as! String, country: city["country"] as! String, center: Location(latitude: (city["coord"] as! [String : Any])["lat"] as! Double, longitude: (city["coord"] as! [String : Any])["lat"] as! Double))
+                parsedArr.append(cityStruct)
             }
             return parsedArr
         } else {
             return parsedArr
-            
         }
     }
     
