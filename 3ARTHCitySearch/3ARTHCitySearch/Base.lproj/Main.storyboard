@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="119" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="XbK-nf-gDW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitySearchTableViewCell" rowHeight="68" id="XbK-nf-gDW" customClass="CitySearchTableViewCell" customModule="_ARTHCitySearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XbK-nf-gDW" id="jcy-iD-S6e">
@@ -36,21 +36,27 @@
                                                         <constraint firstAttribute="height" constant="2" id="SvV-Zv-MuC"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q57-11-Z0a">
-                                                    <rect key="frame" x="15" y="11" width="261" height="37"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Light" family="Kohinoor Telugu" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q57-11-Z0a">
+                                                    <rect key="frame" x="23" y="11" width="329" height="37"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="V6E-6d-77j" firstAttribute="top" secondItem="q57-11-Z0a" secondAttribute="bottom" constant="18" id="GVV-HZ-Dbt"/>
+                                                <constraint firstItem="q57-11-Z0a" firstAttribute="top" secondItem="jcy-iD-S6e" secondAttribute="top" constant="11" id="Gnf-59-Skv"/>
                                                 <constraint firstAttribute="trailing" secondItem="V6E-6d-77j" secondAttribute="trailing" constant="23" id="H5J-rf-prT"/>
                                                 <constraint firstAttribute="bottom" secondItem="V6E-6d-77j" secondAttribute="bottom" id="Lfc-62-29y"/>
+                                                <constraint firstAttribute="trailing" secondItem="q57-11-Z0a" secondAttribute="trailing" constant="23" id="Qih-NV-u6O"/>
                                                 <constraint firstItem="V6E-6d-77j" firstAttribute="leading" secondItem="jcy-iD-S6e" secondAttribute="leading" constant="23" id="R5M-Bp-ncF"/>
+                                                <constraint firstItem="q57-11-Z0a" firstAttribute="leading" secondItem="jcy-iD-S6e" secondAttribute="leading" constant="23" id="dmN-yJ-OrY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="q57-11-Z0a" id="3K9-O5-NnD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
