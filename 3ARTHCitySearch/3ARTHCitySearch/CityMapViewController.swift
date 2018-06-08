@@ -20,7 +20,13 @@ class CityMapViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let cityName = cityString {
+            cityLabel.text = cityName
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

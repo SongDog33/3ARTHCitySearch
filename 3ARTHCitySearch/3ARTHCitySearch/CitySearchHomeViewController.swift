@@ -21,7 +21,7 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.separatorStyle = .none
         // Do any additional setup after loading the view.
     }
 
@@ -46,11 +46,12 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "CityMapSegue" {
-//
-//
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CityMapSegue" {
+            let vc = segue.destination as! CityMapViewController
+            vc.cityString = "My City, 3ARTH"
+
+        }
+    }
 
 }
