@@ -13,6 +13,8 @@
 		D9C02BED20CA2F5E00C22613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */; };
 		D9C02BF020CA2F5E00C22613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BEE20CA2F5E00C22613 /* LaunchScreen.storyboard */; };
 		D9C02BFB20CA2F5F00C22613 /* _ARTHCitySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C02BFA20CA2F5F00C22613 /* _ARTHCitySearchTests.swift */; };
+		D9C02C0620CA32F200C22613 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = D9C02C0520CA32F200C22613 /* cities.json */; };
+		D9C02C0720CA32F200C22613 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = D9C02C0520CA32F200C22613 /* cities.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		D9C02BF620CA2F5E00C22613 /* 3ARTHCitySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3ARTHCitySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C02BFA20CA2F5F00C22613 /* _ARTHCitySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _ARTHCitySearchTests.swift; sourceTree = "<group>"; };
 		D9C02BFC20CA2F5F00C22613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C02C0520CA32F200C22613 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 				D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */,
 				D9C02BEE20CA2F5E00C22613 /* LaunchScreen.storyboard */,
 				D9C02BF120CA2F5E00C22613 /* Info.plist */,
+				D9C02C0520CA32F200C22613 /* cities.json */,
 			);
 			path = 3ARTHCitySearch;
 			sourceTree = "<group>";
@@ -177,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C02C0620CA32F200C22613 /* cities.json in Resources */,
 				D9C02BF020CA2F5E00C22613 /* LaunchScreen.storyboard in Resources */,
 				D9C02BED20CA2F5E00C22613 /* Assets.xcassets in Resources */,
 				D9C02BEB20CA2F5D00C22613 /* Main.storyboard in Resources */,
@@ -187,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C02C0720CA32F200C22613 /* cities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
