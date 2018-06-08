@@ -10,6 +10,12 @@
 		D9240E9D20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */; };
 		D9240E9E20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */; };
 		D9240EA120CAF1D900E4CBEE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9240EA020CAF1D900E4CBEE /* MapKit.framework */; };
+		D9240EA320CB053100E4CBEE /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EA220CB053100E4CBEE /* JSONHandler.swift */; };
+		D9240EA420CB053100E4CBEE /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EA220CB053100E4CBEE /* JSONHandler.swift */; };
+		D9240EA620CB098100E4CBEE /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EA520CB098100E4CBEE /* City.swift */; };
+		D9240EA720CB098100E4CBEE /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EA520CB098100E4CBEE /* City.swift */; };
+		D9240EA920CB09D300E4CBEE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EA820CB09D300E4CBEE /* Location.swift */; };
+		D9240EAA20CB09D300E4CBEE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9240EA820CB09D300E4CBEE /* Location.swift */; };
 		D9C02BE620CA2F5D00C22613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */; };
 		D9C02BEB20CA2F5D00C22613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BE920CA2F5D00C22613 /* Main.storyboard */; };
 		D9C02BED20CA2F5E00C22613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */; };
@@ -34,6 +40,9 @@
 /* Begin PBXFileReference section */
 		D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapViewController.swift; sourceTree = "<group>"; };
 		D9240EA020CAF1D900E4CBEE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D9240EA220CB053100E4CBEE /* JSONHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHandler.swift; sourceTree = "<group>"; };
+		D9240EA520CB098100E4CBEE /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		D9240EA820CB09D300E4CBEE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D9C02BE220CA2F5D00C22613 /* 3ARTHCitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3ARTHCitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C02BEA20CA2F5D00C22613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +83,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D9240EAB20CB160B00E4CBEE /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				D9240EA520CB098100E4CBEE /* City.swift */,
+				D9240EA820CB09D300E4CBEE /* Location.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		D9C02BD920CA2F5D00C22613 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +117,8 @@
 				D9C02BE520CA2F5D00C22613 /* AppDelegate.swift */,
 				D9C02C0B20CA367800C22613 /* CitySearchHomeViewController.swift */,
 				D9240E9C20CAEF5700E4CBEE /* CityMapViewController.swift */,
+				D9240EA220CB053100E4CBEE /* JSONHandler.swift */,
+				D9240EAB20CB160B00E4CBEE /* Structs */,
 				D9C02BE920CA2F5D00C22613 /* Main.storyboard */,
 				D9C02BEC20CA2F5E00C22613 /* Assets.xcassets */,
 				D9C02BEE20CA2F5E00C22613 /* LaunchScreen.storyboard */,
@@ -220,8 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9240EA320CB053100E4CBEE /* JSONHandler.swift in Sources */,
+				D9240EA620CB098100E4CBEE /* City.swift in Sources */,
 				D9240E9D20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */,
 				D9C02C0C20CA367800C22613 /* CitySearchHomeViewController.swift in Sources */,
+				D9240EA920CB09D300E4CBEE /* Location.swift in Sources */,
 				D9C02BE620CA2F5D00C22613 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,8 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9240EA420CB053100E4CBEE /* JSONHandler.swift in Sources */,
+				D9240EA720CB098100E4CBEE /* City.swift in Sources */,
 				D9240E9E20CAEF5700E4CBEE /* CityMapViewController.swift in Sources */,
 				D9C02C0D20CA367800C22613 /* CitySearchHomeViewController.swift in Sources */,
+				D9240EAA20CB09D300E4CBEE /* Location.swift in Sources */,
 				D9C02BFB20CA2F5F00C22613 /* _ARTHCitySearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

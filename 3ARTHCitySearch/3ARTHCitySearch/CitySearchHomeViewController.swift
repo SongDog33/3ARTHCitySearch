@@ -18,16 +18,18 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    var citiesArray : [Any]?
+
+    let jsonHandler = JSONHandler.defaultHandler
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        // Do any additional setup after loading the view.
+        citiesArray = jsonHandler.parseCityArray()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK: UITableView Datasource & Delegate Methods
@@ -50,7 +52,6 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
         if segue.identifier == "CityMapSegue" {
             let vc = segue.destination as! CityMapViewController
             vc.cityString = "My City, 3ARTH"
-
         }
     }
 
