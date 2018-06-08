@@ -12,6 +12,9 @@ import MapKit
 class CityMapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var cityLabel: UILabel!
+    var cityString: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

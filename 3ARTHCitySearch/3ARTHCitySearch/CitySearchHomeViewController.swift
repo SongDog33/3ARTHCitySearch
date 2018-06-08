@@ -32,7 +32,7 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     
     //MARK: UITableView Datasource & Delegate Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 100
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,20 +40,17 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CitySearchTableViewCell", for: indexPath) as! CitySearchTableViewCell
+        
+        cell.nameLabel.text = "My City"
+        return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "CityMapSegue" {
+//
+//
+//        }
+//    }
 
 }

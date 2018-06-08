@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="119" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitySearchTableViewCell" rowHeight="68" id="XbK-nf-gDW" customClass="CitySearchTableViewCell" customModule="_ARTHCitySearch" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CitySearchTableViewCell" rowHeight="68" id="XbK-nf-gDW" customClass="CitySearchTableViewCell" customModule="_ARTHCitySearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XbK-nf-gDW" id="jcy-iD-S6e">
@@ -122,9 +122,14 @@
                                     <action selector="dismissMapView:" destination="v8c-E4-IyN" eventType="touchUpInside" id="hef-C2-DaJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V73-D2-emq">
-                                <rect key="frame" x="19" y="529" width="337" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Viewing..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow4-xr-quz">
+                                <rect key="frame" x="16" y="504" width="87" height="17"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V73-D2-emq">
+                                <rect key="frame" x="165.5" y="538" width="43.5" height="39"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -136,20 +141,27 @@
                             <constraint firstItem="dJZ-Z5-LWp" firstAttribute="top" secondItem="Qc1-OH-xVd" secondAttribute="top" id="2f0-0T-gmh"/>
                             <constraint firstItem="dJZ-Z5-LWp" firstAttribute="leading" secondItem="hQ6-kK-yba" secondAttribute="leading" id="9i8-gd-jix"/>
                             <constraint firstItem="yzN-aM-V3q" firstAttribute="bottom" secondItem="hQ6-kK-yba" secondAttribute="bottom" id="Fz5-K9-rZj"/>
+                            <constraint firstItem="V73-D2-emq" firstAttribute="top" secondItem="dJZ-Z5-LWp" secondAttribute="bottom" constant="52" id="QUo-4W-JDi"/>
                             <constraint firstItem="dJZ-Z5-LWp" firstAttribute="trailing" secondItem="hQ6-kK-yba" secondAttribute="trailing" id="XYR-UL-HXK"/>
+                            <constraint firstItem="V73-D2-emq" firstAttribute="centerX" secondItem="hQ6-kK-yba" secondAttribute="centerX" id="Xxa-7w-M1B"/>
+                            <constraint firstItem="yzN-aM-V3q" firstAttribute="top" secondItem="V73-D2-emq" secondAttribute="bottom" constant="40" id="c0o-dC-IYM"/>
+                            <constraint firstItem="Ow4-xr-quz" firstAttribute="leading" secondItem="hQ6-kK-yba" secondAttribute="leading" constant="16" id="ifz-p6-baH"/>
                             <constraint firstItem="yzN-aM-V3q" firstAttribute="leading" secondItem="hQ6-kK-yba" secondAttribute="leading" id="lKZ-ie-6Mq"/>
                             <constraint firstItem="yzN-aM-V3q" firstAttribute="top" secondItem="dJZ-Z5-LWp" secondAttribute="bottom" constant="131" id="nRL-ii-3OH"/>
+                            <constraint firstItem="Ow4-xr-quz" firstAttribute="top" secondItem="dJZ-Z5-LWp" secondAttribute="bottom" constant="18" id="shW-KA-U4b"/>
                             <constraint firstItem="yzN-aM-V3q" firstAttribute="trailing" secondItem="hQ6-kK-yba" secondAttribute="trailing" id="uHa-98-Jpc"/>
+                            <constraint firstItem="hQ6-kK-yba" firstAttribute="trailing" secondItem="Ow4-xr-quz" secondAttribute="trailing" constant="272" id="wFV-lK-1ce"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hQ6-kK-yba"/>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="V73-D2-emq" id="ghM-Fz-Biv"/>
                         <outlet property="mapView" destination="dJZ-Z5-LWp" id="DjO-cn-o71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJV-2b-FGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.60000000000002" y="136.28185907046478"/>
+            <point key="canvasLocation" x="673" y="115"/>
         </scene>
     </scenes>
 </document>
