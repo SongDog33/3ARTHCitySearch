@@ -29,6 +29,7 @@ class CityMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        //MARK: MapView Centers to Coordinates
         if let city = city {
             let center = CLLocationCoordinate2D(latitude: city.center.latitude, longitude: city.center.longitude)
             let span = MKCoordinateSpan(latitudeDelta: 40, longitudeDelta: 40)

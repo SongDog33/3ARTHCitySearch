@@ -26,7 +26,6 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorStyle = .none
         let arr = jsonHandler.parseCityArray()
         citiesArray = orderCitiesArray(arr: arr)
     }
@@ -34,19 +33,11 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    //MARK: Filtering Methods for search
-    func isFiltering() -> Bool {
-        return !searchBarIsEmpty()
-    }
-
-    func searchBarIsEmpty() -> Bool {
-        return searchBar.text?.isEmpty ?? true
-    }
+   
     //MARK: UISearchBarDelegate Method for filtering search text
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == ""{
             isSearching = false
-//            view.endEditing(true)
             tableView.reloadData()
         } else{
             isSearching = true
@@ -56,17 +47,6 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
                 
             tableView.reloadData()
         }
-    }
-    
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-//        filteredCities = citiesArray!.filter({( city : City) -> Bool in
-//            return (city ).name.lowercased().contains(searchText.lowercased())
-//            } as! (Any) -> Bool) as! [City]
-//
-//        tableView.reloadData()
-//        filteredCities = Array.filter {
-//            $0.name == searchText
-//        }
     }
     
     //MARK: UITableView Datasource & Delegate Methods
