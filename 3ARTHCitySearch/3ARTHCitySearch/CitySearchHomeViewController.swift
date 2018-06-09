@@ -51,7 +51,7 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
         } else{
             isSearching = true
             filteredCities = (citiesArray?.filter {
-                $0.name.lowercased().contains(searchText.lowercased())
+                $0.name.lowercased().hasPrefix(searchText.lowercased())
                 })!
                 
             tableView.reloadData()
@@ -100,7 +100,12 @@ class CitySearchHomeViewController: UIViewController, UITableViewDelegate, UITab
             let vc = segue.destination as! CityMapViewController
             let cell = sender as! CitySearchTableViewCell
             let idxPath = tableView.indexPath(for: cell)
-            vc.city = citiesArray?[(idxPath?.row)!]
+            
+            if isSearching {
+                vc.city = filteredCities[(idxPath?.row)!]
+            } else {
+                vc.city = citiesArray?[(idxPath?.row)!]
+            }
         }
     }
 
