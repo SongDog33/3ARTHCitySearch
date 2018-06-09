@@ -65,7 +65,7 @@
                                     <outlet property="delegate" destination="R7p-kE-r10" id="eMk-fV-cqW"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ok6-B1-2LR">
+                            <searchBar contentMode="redraw" placeholder="Search Cities" translatesAutoresizingMaskIntoConstraints="NO" id="Ok6-B1-2LR">
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
